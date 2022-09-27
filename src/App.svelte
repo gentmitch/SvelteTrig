@@ -159,14 +159,7 @@
   </div>
 
   <div id="controls">
-    <InputLabel
-      name="speed"
-      labelText="Speed"
-      max={10}
-      type="range"
-      step={0.1}
-      bind:value={speed}
-    />
+
     <InputLabel
       name="radius"
       labelText="Radius"
@@ -176,8 +169,20 @@
       step={0.1}
       bind:value={radius}
     />
-
+    
     <div id="toggles">
+      <InputLabel
+      name="xyLine"
+      bind:checked={toggles.showXYLine}
+      labelText="Hypotenuse"
+      type="checkbox"
+      />
+      <InputLabel
+        name="circle"
+        bind:checked={toggles.showRedDot}
+        labelText="Point"
+        type="checkbox"
+      />
       <InputLabel
         name="xAxis"
         bind:checked={toggles.showXAxis}
@@ -197,12 +202,6 @@
         type="checkbox"
       />
       <InputLabel
-        name="circle"
-        bind:checked={toggles.showRedDot}
-        labelText="Show Angle point"
-        type="checkbox"
-      />
-      <InputLabel
         name="yLine"
         bind:checked={toggles.showYLine}
         labelText="Cosine Mapping"
@@ -213,12 +212,6 @@
         name="xLine"
         bind:checked={toggles.showXLine}
         labelText="Sine Mapping"
-        type="checkbox"
-      />
-      <InputLabel
-        name="xyLine"
-        bind:checked={toggles.showXYLine}
-        labelText="Hypotenuse"
         type="checkbox"
       />
       <InputLabel
